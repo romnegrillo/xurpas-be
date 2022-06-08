@@ -22,8 +22,6 @@ django_env/Scripts/activate
 pip install -r requirements.txt
 ```
 
-#
-
 ## Running the server:
 - To start running the server, simply run the command:
 ```
@@ -32,7 +30,6 @@ python manage.py runserver
 - It will have an output the the server is currently running at `localhost:8000`.
 - Open the browser and navigate to `localhost:8000/users/all/` and you should see an interface that says you are not authenticated to that endpoint. This means the server is working.
 - To stop the server just press `Ctrl + C`.
-#
 
 ## Endpoint list:
 - List all users (GET): `localhost:8000/users/all/`
@@ -41,8 +38,6 @@ python manage.py runserver
 - Update user (PUT or PATCH): `localhost:8000/users/update/<int:id>/`
 - Delete user (DELETE): `localhost:8000/users/delete/<int:id>/`
 - Delete multiple users (POST): `localhost:8000/users/delete/multiple/`
-
-#
 
 ## Testing using the graphical built in Django API interface:
 - Django has built-in  graphical interface for testing the API just like Postman.
@@ -53,8 +48,6 @@ python manage.py runserver
 - Then you can visit the endpoints in the browser directly to test.
 
 ![Endpoint UI Test](/sample_outputs/endpoint_ui_test.png)
-
-#
 
 ## Testing using Python scripts:
 - I've created one script per each endpoint in `py_client` folder, you just need to run it using the command 
@@ -73,16 +66,12 @@ Script names:
 
 ![Endpoint Script Test](/sample_outputs/endpoint_script_test.png)
 
-#
-
 ## Seeding the database models:
 - You can populate the database by using the command:
 ```
 python manage.py seed --number 10
 ```
 The command above will populate the database with 10 records with random data that corresponds to each defined datatype.
-
-#
 
 ## Changing between MySQL and SQLite3:
 - I coded it initially on sqlite3 since it's built-in in Django.
